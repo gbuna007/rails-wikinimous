@@ -7,5 +7,5 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 10.times do
-  Article.create({ title: Faker::Company.bs, content: Faker::Lorem.paragraph })
+  Article.create({ title: Faker::Company.bs.capitalize, content: Faker::Lorem.paragraph })
 end
