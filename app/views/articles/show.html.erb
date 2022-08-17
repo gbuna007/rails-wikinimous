@@ -1,3 +1,4 @@
-<h2 class="pb-3"><%= @article.title %> <%= link_to 'edit', edit_article_path %></h2>
+<h2 class="pb-3"><%= @article.title %> <%= link_to '<i class="bi bi-pencil"></i>'.html_safe, edit_article_path %> <%= link_to '<i class="bi bi-trash text-danger"></i>'.html_safe, article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h2>
 <hr>
 <%= @article.content %>
